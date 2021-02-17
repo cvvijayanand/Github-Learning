@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+
+
+        var array = ["Pizza", "Burrito", "Sushi", "Burger"]
+
+        //Scroll View to display the array
+        ScrollView {
+        ForEach (array, id: \.self) { r in
+            Text(r)
+        }
+        }
     }
 }
 
